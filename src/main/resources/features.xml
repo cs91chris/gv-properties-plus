@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.3.0"	name="${project.artifactId}-${project.version}">
 	<repository>mvn:it.greenvulcano.gvesb/gvengine-features/${gvesb.version}/xml/features</repository>	
-		
-	<feature name="gvvcl-mongodb" description="GreenVulcano MongoDB VCL plugin" version="${project.version}">		  
-				
+
+	<feature name="gv-extra-properties" description="GreenVulcano Extra properties handler" version="${project.version}">		  
 		<feature prerequisite="true">gvengine</feature>
-		<bundle start-level="96">mvn:it.greenvulcano.gvesb.adapter/gvvcl-mongo-unofficial/4.1.0-SNAPSHOT</bundle>
+		<bundle start-level="96">mvn:it.greenvulcano.gvesb.util/gv-extras-properties/1.0.0-SNAPSHOT</bundle>
 	</feature>
-	
 </features>
