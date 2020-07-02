@@ -6,6 +6,9 @@ This GreenVulcano extension adds a new set of placeholders:
 
 1. the ``sqljson``, which acts both as ``sql`` and ``sqltable`` placeholders, depending on how many results it has to fetch and response with json format.
 
+2. the ``jsonpath`` that takes a json string and an expression. see [https://github.com/json-path/JsonPath](https://github.com/json-path/JsonPath)
+
+
 ## Getting started
 
 ### Prerequisites
@@ -16,10 +19,12 @@ You need to install the GreenVulcano engine on the Apache Karaf container. Pleas
 
 Clone or download this repository on your computer, and then run ``mvn install`` in its root folder.
 
-Then, run this command in the karaf shell to install the actual extension:
+Then, run this command in the karaf shell to install the actual extension and the dependencies:
 
 ```shell
-bundle:install -s -l 96 mvn:<PATH_PROJECT>/target/gv-properties-plus-<VERSION>.jar
+bundle:install -s -l 96 mvn:com.jayway.jsonpath/json-path/2.1.0
+bundle:install -s -l 96 mvn:com.fasterxml.jackson.core/jackson-databind/2.9.10
+bundle:install -s -l 96 file:<PATH_PROJECT>/target/gv-properties-plus-<VERSION>.jar
 ```
 
 That's it! You can now make use of the new placeholders in your Vulcon project.

@@ -13,7 +13,6 @@ import org.json.JSONObject;
 
 import it.greenvulcano.gvesb.j2ee.db.GVDBException;
 import it.greenvulcano.gvesb.j2ee.db.connections.JDBCConnectionBuilder;
-import it.greenvulcano.gvesb.util.extras.placeholders.BasePropertiesHandler;
 import it.greenvulcano.util.metadata.PropertiesHandlerException;
 
 public class SqlJsonHandler extends BasePropertiesHandler {

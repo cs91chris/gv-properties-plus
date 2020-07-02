@@ -1,5 +1,5 @@
 
-package it.greenvulcano.gvesb.util.extras.placeholders;
+package it.greenvulcano.gvesb.util.extras.placeholders.handlers;
 
 import java.util.LinkedList;
 import java.util.List;
